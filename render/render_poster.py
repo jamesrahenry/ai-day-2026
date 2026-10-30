@@ -1,14 +1,18 @@
 """Render the poster .dc.html locally: swap /_blob/ ids for local figure files, screenshot at A1 px size,
-and report the bounding boxes of every top-level section so overflow is measurable, not guessed."""
+and report the bounding boxes of every top-level section so overflow is measurable, not guessed.
+
+Run from any directory: python render/render_poster.py [device_scale_factor]
+(needs: pip install playwright && playwright install chromium). Outputs land in render/;
+copy render/poster.pdf and render/poster.png to the repo root to refresh the published files."""
 import re, sys, json
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 SCR = Path(__file__).resolve().parents[1]
-SRC = SCR/"poster/project/Main.dc.html"
+SRC = SCR/"poster/Main.dc.html"
 BLOBS = {  # asset id -> local file
-    "dbb14ea3c46a32cc4245a21c805d15a1": SCR/"figgen/fig_ribbon_credibility_null.png",
-    "76b38cd1f261a4f3b1f17e7da4be8987": SCR/"figgen/fig_sep_curves.png",
-    "2662a7c9f553a0431bf6a49aef4cbb4d": SCR/"figgen/qr_ai_day_2026.png",
+    "dbb14ea3c46a32cc4245a21c805d15a1": SCR/"figures/fig_ribbon_credibility_null.png",
+    "76b38cd1f261a4f3b1f17e7da4be8987": SCR/"figures/fig_sep_curves.png",
+    "2662a7c9f553a0431bf6a49aef4cbb4d": SCR/"figures/qr_ai_day_2026.png",
 }
 html = SRC.read_text()
 for k,v in BLOBS.items(): html = html.replace(f"/_blob/{k}", v.resolve().as_uri())

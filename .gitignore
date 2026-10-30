@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 render/poster_render.html
+render/poster.png
+render/poster.pdf
+render/poster_render.html
