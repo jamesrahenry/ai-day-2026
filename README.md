@@ -3,7 +3,11 @@
 *Poster, Brock AI Day 2026 · James R. A. Henry, Computer Science (Undergraduate), Brock University*
 *jh13nt@brocku.ca · jamesrahenry@henrynet.ca*
 
-*Written: 2026-10-30 23:40 UTC · Updated: 2026-10-31 00:05 UTC*
+**[Download the poster (A1 PDF, 3 MB)](poster.pdf)**
+
+[![The poster](poster.png)](poster.pdf)
+
+*Written: 2026-10-30 23:40 UTC · Updated: 2026-10-31 01:10 UTC*
 
 An A1 poster introducing mechanistic interpretability for a general AI audience: the Linear
 Representation Hypothesis (concepts as vectors in a model's activation space), how a concept
@@ -23,6 +27,7 @@ ones gives 6%.
 
 ## Contents
 
+- `poster.pdf`, `poster.png` — the current print file and a preview (also versioned under `render/`).
 - `poster/Main.dc.html`, `poster/canvas.json` — the poster source as published. Image `src`
   values are artifact asset ids (`/_blob/<id>`); `render/render_poster.py` maps them to files.
 - `figgen/` — figure scripts. All read `~/rosetta_data/paper_n250/<model>/caz_<concept>.json`
