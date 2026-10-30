@@ -37,7 +37,9 @@ ones gives 6%.
   - `rsa_null_fig.py`, `before_after_pair.py`, `anchor_profile.py` — earlier candidate figures
   - `make_qr.py` — the footer QR code
 - `figures/` — the rendered figures used on the poster (`fig_sep_curves.png`, `fig_ribbon_credibility_null.png`) and the QR code
-- `render/render_poster.py [scale]` — Playwright screenshot of the poster at A1 pixel size with per-section heights; `render/poster_preview_half.png` is the latest half-scale preview.
+- `render/render_poster.py [scale]` — Playwright render of the poster: a PNG screenshot at A1 pixel size (times `scale`), a
+  print-ready single-page PDF at 594 x 841 mm with the fonts embedded, and the per-section heights on stdout.
+  `render/poster_v22_A1.pdf` is the current print file; `render/poster_v22_full.png` the matching preview.
 
 The figure scripts import `rosetta_tools.viz_style` for the shared concept palette; clone [Rosetta_Tools](https://github.com/jamesrahenry/Rosetta_Tools) beside this repo or under `~/rosetta_tools`. Python deps: numpy, scipy, matplotlib, playwright (render only), qrcode (QR only).
 

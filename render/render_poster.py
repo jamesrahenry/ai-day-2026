@@ -27,5 +27,8 @@ with sync_playwright() as p:
       return {root: {height: Math.round(r.height), scrollHeight: root.scrollHeight}, rows, fig4: ib ? {w: Math.round(ib.width), h: Math.round(ib.height)} : null};
     }""")
     pg.screenshot(path=str(out/"poster.png"), full_page=True)
+    # Print-ready PDF: one page exactly the poster's CSS size (2246 x 3178 px = 594 x 841 mm at 96 px/in), fonts embedded.
+    pg.emulate_media(media="screen")
+    pg.pdf(path=str(out/"poster.pdf"), width="2246px", height="3178px", print_background=True, margin={"top":"0","right":"0","bottom":"0","left":"0"})
     b.close()
 print(json.dumps(boxes, indent=1)); print("missing blobs:", missing)
