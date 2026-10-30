@@ -3,7 +3,7 @@
 *Poster, Brock AI Day 2026 · James R. A. Henry, Computer Science (Undergraduate), Brock University*
 *jh13nt@brocku.ca · jamesrahenry@henrynet.ca*
 
-*Written: 2026-10-30 23:40 UTC*
+*Written: 2026-10-30 23:40 UTC · Updated: 2026-10-31 00:05 UTC*
 
 An A1 poster introducing mechanistic interpretability for a general AI audience: the Linear
 Representation Hypothesis (concepts as vectors in a model's activation space), how a concept
@@ -35,12 +35,60 @@ ones gives 6%.
     in 4,096 dimensions it scores 0.98 for the true pairing, 0.88 for shuffled labels and 0.93 for random
     vectors, so it cannot tell structure from noise
   - `rsa_null_fig.py`, `before_after_pair.py`, `anchor_profile.py` — earlier candidate figures
-- `render/render_poster.py [scale]` — Playwright screenshot of the poster at A1 pixel size with per-section heights.
+  - `make_qr.py` — the footer QR code
+- `figures/` — the rendered figures used on the poster (`fig_sep_curves.png`, `fig_ribbon_credibility_null.png`) and the QR code
+- `render/render_poster.py [scale]` — Playwright screenshot of the poster at A1 pixel size with per-section heights; `render/poster_preview_half.png` is the latest half-scale preview.
+
+The figure scripts import `rosetta_tools.viz_style` for the shared concept palette; clone [Rosetta_Tools](https://github.com/jamesrahenry/Rosetta_Tools) beside this repo or under `~/rosetta_tools`. Python deps: numpy, scipy, matplotlib, playwright (render only), qrcode (QR only).
+
+## Models
+
+35 base models, 10 families. `n_layers` counts decoder blocks; the extractor also keeps the embedding output as layer 0.
+
+| Family | Model (Hugging Face id) | Layers | Hidden dim |
+|---|---|---|---|
+| Falcon | `tiiuae/falcon-40b` | 60 | 8192 |
+| GPT-2 | `openai-community/gpt2` | 12 | 768 |
+| GPT-2 | `openai-community/gpt2-medium` | 24 | 1024 |
+| GPT-2 | `openai-community/gpt2-large` | 36 | 1280 |
+| GPT-2 | `openai-community/gpt2-xl` | 48 | 1600 |
+| GPT-Neo | `EleutherAI/gpt-neo-125m` | 12 | 768 |
+| Gemma | `google/gemma-2-2b` | 26 | 2304 |
+| Gemma | `google/gemma-4-26B-A4B` | 30 | 2816 |
+| Gemma | `google/gemma-2-9b` | 42 | 3584 |
+| Llama | `meta-llama/Llama-3.2-1B` | 16 | 2048 |
+| Llama | `meta-llama/Llama-3.2-3B` | 28 | 3072 |
+| Llama | `meta-llama/Llama-3.1-8B` | 32 | 4096 |
+| Llama | `meta-llama/Llama-3.1-70B` | 80 | 8192 |
+| Mistral | `mistralai/Mistral-7B-v0.3` | 32 | 4096 |
+| OPT | `facebook/opt-125m` | 12 | 768 |
+| OPT | `facebook/opt-350m` | 24 | 1024 |
+| OPT | `facebook/opt-1.3b` | 24 | 2048 |
+| OPT | `facebook/opt-2.7b` | 32 | 2560 |
+| OPT | `facebook/opt-6.7b` | 32 | 4096 |
+| Phi | `microsoft/phi-2` | 32 | 2560 |
+| Pythia | `EleutherAI/pythia-70m` | 6 | 512 |
+| Pythia | `EleutherAI/pythia-160m` | 12 | 768 |
+| Pythia | `EleutherAI/pythia-410m` | 24 | 1024 |
+| Pythia | `EleutherAI/pythia-1.4b` | 24 | 2048 |
+| Pythia | `EleutherAI/pythia-1b` | 16 | 2048 |
+| Pythia | `EleutherAI/pythia-2.8b` | 32 | 2560 |
+| Pythia | `EleutherAI/pythia-6.9b` | 32 | 4096 |
+| Pythia | `EleutherAI/pythia-12b` | 36 | 5120 |
+| Qwen2.5 | `Qwen/Qwen2.5-0.5B` | 24 | 896 |
+| Qwen2.5 | `Qwen/Qwen2.5-1.5B` | 28 | 1536 |
+| Qwen2.5 | `Qwen/Qwen2.5-3B` | 36 | 2048 |
+| Qwen2.5 | `Qwen/Qwen2.5-7B` | 28 | 3584 |
+| Qwen2.5 | `Qwen/Qwen2.5-14B` | 48 | 5120 |
+| Qwen2.5 | `Qwen/Qwen2.5-32B` | 64 | 5120 |
+| Qwen2.5 | `Qwen/Qwen2.5-72B` | 80 | 8192 |
+
+Instruction-tuned variants were excluded. Concept vectors are difference-of-means directions at the last token of each passage, one per layer, from 250 contrastive pairs per concept (`paper_n250` tree of the dataset below).
 
 ## Data and tooling
 
 - Activations and concept vectors: [james-ra-henry/Rosetta-Activations](https://huggingface.co/datasets/james-ra-henry/Rosetta-Activations) (MIT)
-- Contrastive pairs: [jamesrahenry/Rosetta_Concept_Pairs](https://github.com/jamesrahenry/Rosetta_Concept_Pairs)
+- Contrastive pairs (RCP, Rosetta Concept Pairs): [jamesrahenry/Rosetta_Concept_Pairs](https://github.com/jamesrahenry/Rosetta_Concept_Pairs)
 - Extraction and analysis tooling: [jamesrahenry/Rosetta_Tools](https://github.com/jamesrahenry/Rosetta_Tools)
 
 ## This work
