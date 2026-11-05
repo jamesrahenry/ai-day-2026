@@ -1,18 +1,42 @@
 {
   "v": 4,
-  "createdOnFiles": {"v": 1, "at": "2026-11-05T15:40:00Z"},
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-05T15:40:00Z"
+  },
   "lists": "css",
   "title": "AI Day Lightning Talk",
-  "order": ["cover", "vectors", "hypothesis", "test", "result", "meaning"],
+  "order": [
+    "cover",
+    "interp",
+    "lrh",
+    "vectors",
+    "hypothesis",
+    "meaning"
+  ],
   "sections": {
-    "s1": {"description": "Question: do models trained on different text organize concepts the same way?", "start": "cover"},
-    "s2": {"description": "Method: concept vectors from contrastive pairs, and the hypothesis they test.", "start": "vectors"},
-    "s3": {"description": "Evidence: 35 models, one question, and a test that can fail.", "start": "test"},
-    "s4": {"description": "Meaning: the open question, and where to find the poster.", "start": "meaning"}
+    "s1": {
+      "description": "Question: do models trained on different text organize concepts the same way?",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "Background: mechanistic interpretability, the linear representation hypothesis, and how concept vectors are found.",
+      "start": "interp"
+    },
+    "s3": {
+      "description": "Hypothesis and invitation: the platonic representation hypothesis, and the poster.",
+      "start": "hypothesis"
+    }
   },
   "faces": {
-    "bricolage-grotesque": {"family": "Bricolage Grotesque", "href": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&display=swap"},
-    "source-serif-4": {"family": "Source Serif 4", "href": "https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap"}
+    "bricolage-grotesque": {
+      "family": "Bricolage Grotesque",
+      "href": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&display=swap"
+    },
+    "source-serif-4": {
+      "family": "Source Serif 4",
+      "href": "https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap"
+    }
   },
   "designSystems": []
 }
