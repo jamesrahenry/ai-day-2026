@@ -1,6 +1,6 @@
 # Lightning talk: speaker notes
 
-*Written: 2026-11-05 20:50 UTC*
+*Written: 2026-11-05 20:53 UTC*
 
 About 519 words in the notes, roughly 3.5 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
 
