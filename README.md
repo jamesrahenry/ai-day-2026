@@ -7,7 +7,7 @@
 
 [![The poster](poster.png)](poster.pdf)
 
-*Written: 2026-10-30 23:40 UTC · Updated: 2026-10-31 01:10 UTC*
+*Written: 2026-10-30 23:40 UTC · Updated: 2026-11-05 20:00 UTC*
 
 An A1 poster introducing mechanistic interpretability for a general AI audience: the Linear
 Representation Hypothesis (concepts as vectors in a model's activation space), how a concept
@@ -44,7 +44,8 @@ ones gives 6%.
 - `figures/` — the rendered figures used on the poster (`fig_sep_curves.png`, `fig_ribbon_credibility_null.png`) and the QR code
 - `render/render_poster.py [scale]` — Playwright render of the poster: a PNG screenshot at A1 pixel size (times `scale`), a
   print-ready single-page PDF at 594 x 841 mm with the fonts embedded, and the per-section heights on stdout.
-  `render/poster_v23_A1.pdf` is the current print file; `render/poster_v23_full.png` the matching preview.
+  It writes `render/poster.pdf` and `render/poster.png` (git-ignored); copy them to the repo root to refresh the published files.
+  The two matplotlib figures are drawn at their printed size on the A1 sheet, so the font sizes in the scripts are the printed point sizes.
 
 The figure scripts import `rosetta_tools.viz_style` for the shared concept palette; clone [Rosetta_Tools](https://github.com/jamesrahenry/Rosetta_Tools) beside this repo or under `~/rosetta_tools`. Python deps: numpy, scipy, matplotlib, playwright (render only), qrcode (QR only).
 
