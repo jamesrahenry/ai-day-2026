@@ -41,6 +41,8 @@ ones gives 6%.
     vectors, so it cannot tell structure from noise
   - `rsa_null_fig.py`, `before_after_pair.py`, `anchor_profile.py` — earlier candidate figures
   - `make_qr.py` — the footer QR code
+- `talk/` — the three-minute lightning-talk deck: `talk.pdf` (present from this), `talk.html`, `NOTES.md` (speaker notes),
+  `slides/` (one HTML file per slide) and `build_talk.py` (rebuilds the PDF, HTML and notes from the slides).
 - `figures/` — the rendered figures used on the poster (`fig_sep_curves.png`, `fig_ribbon_credibility_null.png`) and the QR code
 - `render/render_poster.py [scale]` — Playwright render of the poster: a PNG screenshot at A1 pixel size (times `scale`), a
   print-ready single-page PDF at 594 x 841 mm with the fonts embedded, and the per-section heights on stdout.

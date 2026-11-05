@@ -1,0 +1,11 @@
+<section id="test" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:96px 128px 96px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">3 · Our test: 35 models, every layer</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.1;color:#15181D">What is credibility aligned with?</h2>
+</div>
+<div style="display:flex;justify-content:center;background:#FFFFFF;padding:12px;border:1px solid #D3D9E2;border-radius:16px">
+<img src="assets/ribbon_left.png" alt="Cosine between the credibility vector and 16 other concept vectors across network depth for 35 models. Formality is highest; deception and sarcasm are strongly negative; bands tighten past mid-depth." style="width:1560px;height:619px;object-fit:contain">
+</div>
+<p style="font-size:28px;line-height:1.4;color:#3C4450">Each line is a concept’s cosine to credibility across depth; bands show the spread over 35 models. At the final layer formality is closest in 29 of 35. Deception and sarcasm are nearly as strong with the opposite sign (sign = label polarity).</p>
+<aside>About 40 seconds. So I asked 35 models the same question at every layer: what is credibility aligned with? Each line is one concept’s cosine to credibility across depth, and the bands show the spread across models. Formality is closest, in 29 of 35 models at the final layer. Deception and sarcasm are nearly as strong but point the opposite way; the sign only reflects which pole we labeled positive. And the bands tighten from mid-depth on: the models are agreeing. If asked: this is a cosine, so plus and minus 0.7 are the same axis, not the same direction.</aside>
+</section>

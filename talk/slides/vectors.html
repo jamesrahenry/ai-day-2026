@@ -1,0 +1,21 @@
+<section id="vectors" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">1 · Concepts are vectors</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">A model stores each concept as a direction</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:40px;border:1px solid #D3D9E2;border-radius:16px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:26px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#1D4E89">With credibility markers</p>
+<p style="font-size:38px;font-style:italic;line-height:1.4;color:#15181D">“Traditional vaccine development is a meticulous process, typically requiring 10–15 years…”</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:40px;border:1px solid #D3D9E2;border-radius:16px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:26px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5B6572">Same claim, no grounding</p>
+<p style="font-size:38px;font-style:italic;line-height:1.4;color:#15181D">“It’s just common sense that a vaccine should take years to develop…”</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#1D4E89;padding:40px 48px;border-radius:16px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:46px;font-weight:600;line-height:1.2;color:#FFFFFF">mean(with) − mean(without) = the concept vector, at every layer</p>
+<p style="font-size:30px;color:#DCE6F4">17 concepts · about 250 pairs each · written by 14 different LLMs</p>
+</div>
+<aside>About 35 seconds. Start with a simple idea: a model stores a concept like credibility as a direction in its activation space. To find it, I write pairs of passages on the same topic, one with credibility markers and one without. 17 concepts, about 250 pairs each, written by 14 different LLMs. Run both versions through the model, subtract the mean activation of one from the mean of the other, and you get that concept’s vector, at every layer. Project any prompt onto it and you can read off how much of the concept is present.</aside>
+</section>
