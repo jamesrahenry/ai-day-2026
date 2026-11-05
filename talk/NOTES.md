@@ -1,8 +1,8 @@
 # Lightning talk: speaker notes
 
-*Written: 2026-11-05 21:18 UTC*
+*Written: 2026-11-05 21:24 UTC*
 
-About 490 words in the notes, roughly 3.3 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
+About 487 words in the notes, roughly 3.2 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
 
 ## 1. cover
 
@@ -10,7 +10,7 @@ About 10 seconds. Hi, I’m James Henry. My question: when different language mo
 
 ## 2. interp
 
-About 40 seconds. People say AI is a “black box”, but that is not strictly true. From the outside, all we see is what a model says. Mechanistic interpretability is an attempt to understand how the model represents information: instead of judging it by its outputs, we read its internal activations, layer by layer. That needs the model’s weights, so it is only possible with open models, which is why this work uses them.
+About 40 seconds. People say AI is a “black box”, but that is not strictly true. From the outside, all we see is what a model says. Mechanistic interpretability is an attempt to understand how the model represents information: instead of judging it by its outputs, we read its internal activations, layer by layer. You must hold the model’s weights to do it, which is why this work uses open-weight models.
 
 ## 3. lrh
 
