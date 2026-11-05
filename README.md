@@ -108,6 +108,7 @@ Instruction-tuned variants were excluded. Concept vectors are difference-of-mean
 ## Further reading
 
 - Huh, M., Cheung, B., Wang, T., & Isola, P. (2024). The Platonic Representation Hypothesis. *ICML*.
+- Balestriero, R., & LeCun, Y. (2026). Proving and Improving the Platonic Representation Hypothesis with JEPAs. [arXiv:2610.39302](https://arxiv.org/abs/2610.39302)
 - Park, K., Choe, Y. J., & Veitch, V. (2024). The Linear Representation Hypothesis and the Geometry of Large Language Models. *ICML*.
 - Elhage, N., et al. (2022). Toy Models of Superposition. *Transformer Circuits Thread*.
 - Zou, A., et al. (2023). Representation Engineering: A Top-Down Approach to AI Transparency. arXiv:2310.01405.

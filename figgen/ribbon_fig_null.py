@@ -56,7 +56,7 @@ INK="#15181D"; GREY="#8A94A6"; BLUE="#1D4E89"; ORANGE="#B3541E"
 W,H=20.6,4.15; FS=12; LABEL_FS=11.5
 plt.rcParams.update({"axes.axisbelow":True,"font.size":FS,"axes.edgecolor":GREY,"font.family":"DejaVu Sans"})
 fig=plt.figure(figsize=(W,H)); fig.patch.set_facecolor("white")
-gs=gridspec.GridSpec(1,3,width_ratios=[2.35,1.05,1.0],wspace=0.16,left=0.045,right=0.988,bottom=0.15,top=0.9)
+gs=gridspec.GridSpec(1,3,width_ratios=[2.35,1.05,1.0],wspace=0.16,left=0.058,right=0.988,bottom=0.15,top=0.9)
 ax=fig.add_subplot(gs[0,0]); axn=fig.add_subplot(gs[0,1],sharey=ax); ax2=fig.add_subplot(gs[0,2])
 def ribbons(a, data, thin=True):
     finals=[]
@@ -85,7 +85,7 @@ for (v,c,col),y in zip(finals,ys):
     ax.annotate(c.replace("_"," "),xy=(100,v),xytext=(104,y),textcoords="data",fontsize=LABEL_FS,color=col,va="center",
                 fontweight="bold",arrowprops=dict(arrowstyle="-",color=col,lw=0.7,alpha=0.7,shrinkA=0,shrinkB=0))
 ax.set_xlim(0,122); ax.set_ylim(*YLIM)
-ax.set_xlabel("depth in the network (% of layers)"); ax.set_ylabel(f"cosine to {A}")
+ax.set_xlabel("depth in the network (% of layers)"); ax.set_ylabel(f"cosine to {A}\n(sign = label polarity)")
 ax.set_title("Real labels, 35 models",fontsize=12.5,fontweight="bold",loc="left",pad=6)
 ax.set_title("thin line = one model · band = middle half · thick = median",fontsize=FS-1,loc="right",pad=6,color="#3C4450")
 ribbons(axn,cosn,thin=False)
