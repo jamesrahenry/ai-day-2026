@@ -1,6 +1,6 @@
 <section id="vectors" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:40px">
 <div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">1 · Concepts are vectors</p>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">1 · Concepts are vectors: the Linear Representation Hypothesis</p>
 <h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">A model stores each concept as a direction</h2>
 </div>
 <div style="display:flex;gap:32px">
@@ -17,5 +17,6 @@
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:46px;font-weight:600;line-height:1.2;color:#FFFFFF">mean(with) − mean(without) = the concept vector, at every layer</p>
 <p style="font-size:30px;color:#DCE6F4">17 concepts · about 250 pairs each · written by 14 different LLMs</p>
 </div>
-<aside>About 35 seconds. Start with a simple idea: a model stores a concept like credibility as a direction in its activation space. To find it, I write pairs of passages on the same topic, one with credibility markers and one without. 17 concepts, about 250 pairs each, written by 14 different LLMs. Run both versions through the model, subtract the mean activation of one from the mean of the other, and you get that concept’s vector, at every layer. Project any prompt onto it and you can read off how much of the concept is present.</aside>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5B6572">Park, K., Choe, Y. J., &amp; Veitch, V. (2024). <i>The Linear Representation Hypothesis and the Geometry of Large Language Models.</i> ICML.</p>
+<aside>About 35 seconds. Start with the Linear Representation Hypothesis: the idea that a model stores a concept like credibility as a direction in its activation space. To find it, I write pairs of passages on the same topic, one with credibility markers and one without. 17 concepts, about 250 pairs each, written by 14 different LLMs. Run both versions through the model, subtract the mean activation of one from the mean of the other, and you get that concept’s vector, at every layer. Project any prompt onto it and you can read off how much of the concept is present.</aside>
 </section>

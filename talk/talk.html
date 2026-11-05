@@ -22,7 +22,7 @@ section { width: 1920px; height: 1080px; position: relative; overflow: hidden; b
 
 <section id="vectors" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:40px">
 <div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">1 · Concepts are vectors</p>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">1 · Concepts are vectors: the Linear Representation Hypothesis</p>
 <h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">A model stores each concept as a direction</h2>
 </div>
 <div style="display:flex;gap:32px">
@@ -39,16 +39,17 @@ section { width: 1920px; height: 1080px; position: relative; overflow: hidden; b
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:46px;font-weight:600;line-height:1.2;color:#FFFFFF">mean(with) − mean(without) = the concept vector, at every layer</p>
 <p style="font-size:30px;color:#DCE6F4">17 concepts · about 250 pairs each · written by 14 different LLMs</p>
 </div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5B6572">Park, K., Choe, Y. J., &amp; Veitch, V. (2024). <i>The Linear Representation Hypothesis and the Geometry of Large Language Models.</i> ICML.</p>
 
 </section>
 
 <section id="hypothesis" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:24px">
 <div style="display:flex;flex-direction:column;gap:12px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">2 · The hypothesis · Huh, Cheung, Wang &amp; Isola, 2024</p>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">2 · The Platonic Representation Hypothesis</p>
 <h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Different shadows, one world?</h2>
 </div>
 <div style="display:flex;justify-content:center;background:#FFFFFF;padding:16px;border:1px solid #D3D9E2;border-radius:16px">
-<svg viewBox="0 0 1200 430" width="1380" height="494" aria-label="Diagram: one world is seen through different data (two text corpora and images); separately trained models (Llama, Mistral, a vision model that never saw text) each learn from it, and all converge on one shared map of how concepts relate to each other, tighter as models grow larger and better" style="display:block;font-family:'Bricolage Grotesque', Arial, sans-serif">
+<svg viewBox="0 0 1200 430" width="1340" height="480" aria-label="Diagram: one world is seen through different data (two text corpora and images); separately trained models (Llama, Mistral, a vision model that never saw text) each learn from it, and all converge on one shared map of how concepts relate to each other, tighter as models grow larger and better" style="display:block;font-family:'Bricolage Grotesque', Arial, sans-serif">
           <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#15181D"></path></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1D4E89"></path></marker></defs>
           <text x="105" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">THE WORLD</text>
           <text x="350" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">ITS SHADOWS (DATA)</text>
@@ -98,6 +99,7 @@ section { width: 1920px; height: 1080px; position: relative; overflow: hidden; b
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.15;color:#B3541E">What converges is relations, not coordinates.</p>
 <p style="font-size:34px;line-height:1.4;color:#3C4450">Prediction: models that never shared a weight should agree on how concepts relate to each other.</p>
 </div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5B6572">Huh, M., Cheung, B., Wang, T., &amp; Isola, P. (2024). <i>The Platonic Representation Hypothesis.</i> ICML.</p>
 
 </section>
 
@@ -115,22 +117,22 @@ section { width: 1920px; height: 1080px; position: relative; overflow: hidden; b
 
 <section id="result" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 112px;display:flex;flex-direction:column;gap:40px">
 <div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">4 · The test that can fail</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Can angles alone name the concepts?</h2>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">4 · A view from outside</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Can the angles alone recognize a concept?</h2>
 </div>
 <div style="display:flex;gap:48px;align-items:center">
 <div style="flex:1;display:flex;flex-direction:column;gap:36px">
 <div style="display:flex;gap:40px">
 <div style="flex:1;display:flex;flex-direction:column;gap:6px">
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#1D4E89">97%</p>
-<p style="font-size:30px;line-height:1.35;color:#15181D">identified correctly at mid-depth</p>
+<p style="font-size:30px;line-height:1.35;color:#15181D">recognized at mid-depth</p>
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:6px">
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#5B6572">6%</p>
-<p style="font-size:30px;line-height:1.35;color:#15181D">with shuffled labels or random vectors: chance</p>
+<p style="font-size:30px;line-height:1.35;color:#15181D">with shuffled labels or random vectors, which is chance</p>
 </div>
 </div>
-<p style="font-size:32px;line-height:1.4;color:#3C4450">Hold out a whole model family. Describe each of its concept vectors only by its angles to the others, then match against the average from the other families.</p>
+<p style="font-size:32px;line-height:1.4;color:#3C4450">To look from the outside, set one whole family of models aside. Describe each of its concepts only by its angles to the others, and ask whether what the remaining families share is enough to recognize it.</p>
 </div>
 <div style="display:flex;justify-content:center;background:#FFFFFF;padding:12px;border:1px solid #D3D9E2;border-radius:16px">
 <img src="assets/ribbon_right.png" alt="Share of concepts correctly named in a held-out model family, by depth: 87% at the first layer rising to 97% in the upper-middle layers; shuffled labels and random vectors stay flat at about 6%, which is chance." style="width:713px;height:600px;object-fit:contain">

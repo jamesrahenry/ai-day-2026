@@ -1,8 +1,8 @@
 # Lightning talk: speaker notes
 
-*Written: 2026-11-05 20:53 UTC*
+*Written: 2026-11-05 21:07 UTC*
 
-About 519 words in the notes, roughly 3.5 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
+About 552 words in the notes, roughly 3.7 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
 
 ## 1. cover
 
@@ -10,7 +10,7 @@ About 10 seconds. Hi, I’m James Henry. My question: when different language mo
 
 ## 2. vectors
 
-About 35 seconds. Start with a simple idea: a model stores a concept like credibility as a direction in its activation space. To find it, I write pairs of passages on the same topic, one with credibility markers and one without. 17 concepts, about 250 pairs each, written by 14 different LLMs. Run both versions through the model, subtract the mean activation of one from the mean of the other, and you get that concept’s vector, at every layer. Project any prompt onto it and you can read off how much of the concept is present.
+About 35 seconds. Start with the Linear Representation Hypothesis: the idea that a model stores a concept like credibility as a direction in its activation space. To find it, I write pairs of passages on the same topic, one with credibility markers and one without. 17 concepts, about 250 pairs each, written by 14 different LLMs. Run both versions through the model, subtract the mean activation of one from the mean of the other, and you get that concept’s vector, at every layer. Project any prompt onto it and you can read off how much of the concept is present.
 
 ## 3. hypothesis
 
@@ -22,7 +22,7 @@ About 40 seconds. So I asked 35 models the same question at every layer: what is
 
 ## 5. result
 
-About 35 seconds. Here is the test that can fail. Hold out an entire model family. Describe each of its concept vectors only by its angles to the other concepts, and match that against the average angle profile from all the other families. At mid-depth it names the concept correctly 97 percent of the time. Shuffle the labels, or use random vectors instead, and you get 6 percent, which is chance.
+About 35 seconds. A fair question is whether this shared map is really there, or whether I am seeing patterns that any set of vectors would show. So I looked at it from outside. I set one whole model family aside, described each of its concepts only by its angles to the others, and asked whether what the remaining families have in common is enough to recognize it. At mid-depth it is, 97 percent of the time. With shuffled labels, or random vectors, it is 6 percent, which is chance. The angles do seem to carry something the models share.
 
 ## 6. meaning
 

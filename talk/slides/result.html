@@ -1,25 +1,25 @@
 <section id="result" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 112px;display:flex;flex-direction:column;gap:40px">
 <div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">4 · The test that can fail</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Can angles alone name the concepts?</h2>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">4 · A view from outside</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Can the angles alone recognize a concept?</h2>
 </div>
 <div style="display:flex;gap:48px;align-items:center">
 <div style="flex:1;display:flex;flex-direction:column;gap:36px">
 <div style="display:flex;gap:40px">
 <div style="flex:1;display:flex;flex-direction:column;gap:6px">
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#1D4E89">97%</p>
-<p style="font-size:30px;line-height:1.35;color:#15181D">identified correctly at mid-depth</p>
+<p style="font-size:30px;line-height:1.35;color:#15181D">recognized at mid-depth</p>
 </div>
 <div style="flex:1;display:flex;flex-direction:column;gap:6px">
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#5B6572">6%</p>
-<p style="font-size:30px;line-height:1.35;color:#15181D">with shuffled labels or random vectors: chance</p>
+<p style="font-size:30px;line-height:1.35;color:#15181D">with shuffled labels or random vectors, which is chance</p>
 </div>
 </div>
-<p style="font-size:32px;line-height:1.4;color:#3C4450">Hold out a whole model family. Describe each of its concept vectors only by its angles to the others, then match against the average from the other families.</p>
+<p style="font-size:32px;line-height:1.4;color:#3C4450">To look from the outside, set one whole family of models aside. Describe each of its concepts only by its angles to the others, and ask whether what the remaining families share is enough to recognize it.</p>
 </div>
 <div style="display:flex;justify-content:center;background:#FFFFFF;padding:12px;border:1px solid #D3D9E2;border-radius:16px">
 <img src="assets/ribbon_right.png" alt="Share of concepts correctly named in a held-out model family, by depth: 87% at the first layer rising to 97% in the upper-middle layers; shuffled labels and random vectors stay flat at about 6%, which is chance." style="width:713px;height:600px;object-fit:contain">
 </div>
 </div>
-<aside>About 35 seconds. Here is the test that can fail. Hold out an entire model family. Describe each of its concept vectors only by its angles to the other concepts, and match that against the average angle profile from all the other families. At mid-depth it names the concept correctly 97 percent of the time. Shuffle the labels, or use random vectors instead, and you get 6 percent, which is chance.</aside>
+<aside>About 35 seconds. A fair question is whether this shared map is really there, or whether I am seeing patterns that any set of vectors would show. So I looked at it from outside. I set one whole model family aside, described each of its concepts only by its angles to the others, and asked whether what the remaining families have in common is enough to recognize it. At mid-depth it is, 97 percent of the time. With shuffled labels, or random vectors, it is 6 percent, which is chance. The angles do seem to carry something the models share.</aside>
 </section>
