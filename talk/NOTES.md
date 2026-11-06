@@ -1,8 +1,8 @@
 # Lightning talk: speaker notes
 
-*Written: 2026-11-05 21:36 UTC*
+*Written: 2026-11-06 02:04 UTC*
 
-About 480 words in the notes, roughly 3.2 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
+About 404 spoken words in the notes (timing cues and Q&A notes excluded), roughly 2.7 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
 
 ## 1. cover
 
@@ -18,7 +18,7 @@ About 35 seconds. One idea makes that practical: the Linear Representation Hypot
 
 ## 4. vectors
 
-About 40 seconds. Finding the direction is surprisingly simple. Write two versions of the same passage, one with the concept and one without: here, credibility markers against a flat assertion. Run both through the model and subtract the average activation of one from the other. That difference is the concept’s vector, and you can compute it at every layer. I did this for 17 concepts, 250 pairs each. This family of methods is called representation engineering.
+About 40 seconds. Finding the direction is surprisingly simple. Write two versions of the same passage, one with the concept and one without: here, credibility markers against a flat assertion. Run both through the model and subtract the average activation of one from the other. That difference is the concept’s vector, and you can compute it at every layer. I did this for 17 concepts, 250 pairs each.
 
 ## 5. hypothesis
 

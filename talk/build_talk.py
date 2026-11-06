@@ -44,9 +44,12 @@ section {{ width: 1920px; height: 1080px; position: relative; overflow: hidden; 
 (HERE / "talk.html").write_text(page)
 
 now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-words = sum(len(n.split()) for _, n in notes)
+def spoken(n):  # drop the timing cue and any "If asked..." Q&A note; neither is read aloud
+    n = n.split("\n\nIf asked")[0]
+    return re.sub(r"^About \d+ seconds\.\s*", "", n)
+words = sum(len(spoken(n).split()) for _, n in notes)
 md = [f"# Lightning talk: speaker notes", "", f"*Written: {now}*", "",
-      f"About {words} words in the notes, roughly {words / 150:.1f} minutes at 150 words per minute. "
+      f"About {words} spoken words in the notes (timing cues and Q&A notes excluded), roughly {words / 150:.1f} minutes at 150 words per minute. "
       "Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.", ""]
 for i, (sid, n) in enumerate(notes, 1):
     md += [f"## {i}. {sid}", "", n, ""]
