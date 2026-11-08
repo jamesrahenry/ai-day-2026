@@ -1,8 +1,8 @@
 # 3-minute research presentation: speaker notes
 
-*Written: 2026-11-08 10:17 UTC*
+*Written: 2026-11-08 14:25 UTC*
 
-About 394 spoken words in the notes (timing cues and Q&A notes excluded), roughly 2.6 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
+About 401 spoken words in the notes (timing cues and Q&A notes excluded), roughly 2.7 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
 
 ## 1. cover
 
@@ -10,11 +10,11 @@ About 10 seconds. Hi, I’m James Henry. My question is simple to ask: do AI mod
 
 ## 2. background
 
-About 35 seconds. Some background first. First, mechanistic interpretability: we can study a model by reading its internal activity, not just its answers. Second, each concept a model learns, like negation or credibility, is stored as a direction inside it. Third, the Platonic Representation Hypothesis: models trained on different data may converge on the same picture of the world.
+About 35 seconds. Some background first. First, mechanistic interpretability: we can study a model by reading its internal activity, not just its answers. Second, each concept a model learns, like negation or credibility, is stored as a direction inside it: the Linear Representation Hypothesis. Third, the Platonic Representation Hypothesis: models trained on different data may converge on the same representation of the world.
 
 ## 3. problem
 
-About 35 seconds. The problem: every model stores concepts in its own private coordinates, so you can’t simply lay one model’s directions over another’s. But the relationships between concepts could still match. Is credibility close to formality and opposed to sarcasm in every model? It matters because, if the map is shared, what we learn inside one model can be checked in others. And it tells us whether models learn something about the world, or just quirks of their training.
+About 35 seconds. The problem: if the linear and Platonic hypotheses hold, then models trained separately should agree on how concepts relate to each other, even though each stores them in its own private coordinates. Is credibility close to formality and opposed to sarcasm in every model? It matters because, if the map is shared, what we learn inside one model can be checked in others. And it tells us whether models learn something about the world, or just quirks of their training.
 
 ## 4. method
 

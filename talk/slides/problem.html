@@ -1,11 +1,58 @@
-<section id="problem" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:44px">
-<div style="display:flex;flex-direction:column;gap:16px">
+<section id="problem" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:88px 128px 56px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
 <p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Problem</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Do different models share one map of concepts?</h2>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.1;color:#15181D">Do different models share one map of concepts?</h2>
 </div>
-<div style="display:flex;gap:48px;align-items:stretch">
-<div style="flex:1.1;display:flex;flex-direction:column;gap:28px"><p style="font-size:38px;line-height:1.4;color:#15181D">Every model stores concepts in its own private coordinates, so you cannot lay one model’s directions over another’s.</p><p style="font-size:38px;line-height:1.4;color:#15181D">But the <b>relationships</b> between concepts could still match: is credibility close to formality and opposed to sarcasm in every model?</p></div>
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#1D4E89;padding:44px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:30px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#DCE6F4">Why it matters</p><p style="font-size:34px;line-height:1.4;color:#FFFFFF">If the map is shared, what we learn inside one model can be checked in others.</p><p style="font-size:34px;line-height:1.4;color:#FFFFFF">And it tells us whether models learn something about the world, or just quirks of their training.</p></div>
+<div style="display:flex;gap:40px;align-items:stretch">
+<div style="flex:1.15;display:flex;flex-direction:column;gap:18px"><p style="font-size:34px;line-height:1.38;color:#15181D">If the <b>LRH</b> and <b>PRH</b> hold, then models trained separately should agree on how concepts relate, even though each stores them in its own private coordinates.</p><p style="font-size:34px;line-height:1.38;color:#15181D">Is credibility close to formality and opposed to sarcasm in <b>every</b> model?</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#1D4E89;padding:32px 36px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:26px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#DCE6F4">Why it matters</p><p style="font-size:30px;line-height:1.38;color:#FFFFFF">If the map is shared, what we learn inside one model can be checked in others.</p><p style="font-size:30px;line-height:1.38;color:#FFFFFF">And it tells us whether models learn something about the world, or just quirks of their training.</p></div>
 </div>
-<aside>About 35 seconds. The problem: every model stores concepts in its own private coordinates, so you can’t simply lay one model’s directions over another’s. But the relationships between concepts could still match. Is credibility close to formality and opposed to sarcasm in every model? It matters because, if the map is shared, what we learn inside one model can be checked in others. And it tells us whether models learn something about the world, or just quirks of their training.</aside>
+<div style="display:flex;justify-content:center;background:#FFFFFF;padding:12px;border:1px solid #D3D9E2;border-radius:16px">
+<svg viewBox="0 0 1200 430" width="1160" height="416" aria-label="Diagram: one world is seen through different data (two text corpora and images); separately trained models (Llama, Mistral, a vision model that never saw text) each learn from it, and all converge on one shared map of how concepts relate to each other, tighter as models grow larger and better" style="display:block;font-family:'Bricolage Grotesque', Arial, sans-serif">
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#15181D"></path></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1D4E89"></path></marker></defs>
+          <text x="105" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">THE WORLD</text>
+          <text x="350" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">ITS SHADOWS (DATA)</text>
+          <text x="655" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">LEARNERS</text>
+          <text x="1040" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">WHAT THEY RECOVER</text>
+          <line x1="350" y1="44" x2="350" y2="398" stroke="#8A94A6" stroke-width="7"></line>
+          <text x="350" y="424" text-anchor="middle" font-size="20" fill="#5B6472">the cave wall</text>
+          <circle cx="105" cy="215" r="92" fill="#E3EAF4" stroke="#1D4E89" stroke-width="3"></circle>
+          <text x="105" y="210" text-anchor="middle" font-size="28" font-weight="700" fill="#15181D">one world</text>
+          <text x="105" y="240" text-anchor="middle" font-size="21" fill="#2A2F38">Plato: the Form</text>
+          <line x1="175" y1="155" x2="236" y2="105" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
+          <line x1="198" y1="215" x2="236" y2="215" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
+          <line x1="175" y1="275" x2="236" y2="325" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
+          <rect x="245" y="50" width="210" height="90" fill="#4A5260"></rect>
+          <text x="350" y="87" text-anchor="middle" font-size="27" font-weight="700" fill="#FFFFFF">text corpus A</text>
+          <text x="350" y="118" text-anchor="middle" font-size="22" fill="#E3EAF4">web, books, code</text>
+          <rect x="245" y="170" width="210" height="90" fill="#4A5260"></rect>
+          <text x="350" y="207" text-anchor="middle" font-size="27" font-weight="700" fill="#FFFFFF">text corpus B</text>
+          <text x="350" y="238" text-anchor="middle" font-size="22" fill="#E3EAF4">different mix</text>
+          <rect x="245" y="290" width="210" height="90" fill="#4A5260"></rect>
+          <text x="350" y="327" text-anchor="middle" font-size="27" font-weight="700" fill="#FFFFFF">images</text>
+          <text x="350" y="358" text-anchor="middle" font-size="22" fill="#E3EAF4">pixels, no words</text>
+          <line x1="455" y1="95" x2="537" y2="95" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
+          <rect x="545" y="50" width="220" height="90" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></rect>
+          <text x="655" y="87" text-anchor="middle" font-size="27" font-weight="700" fill="#15181D">model A</text>
+          <text x="655" y="118" text-anchor="middle" font-size="22" fill="#2A2F38">e.g. Llama</text>
+          <line x1="455" y1="215" x2="537" y2="215" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
+          <rect x="545" y="170" width="220" height="90" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></rect>
+          <text x="655" y="207" text-anchor="middle" font-size="27" font-weight="700" fill="#15181D">model B</text>
+          <text x="655" y="238" text-anchor="middle" font-size="22" fill="#2A2F38">e.g. Mistral</text>
+          <line x1="455" y1="335" x2="537" y2="335" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
+          <rect x="545" y="290" width="220" height="90" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></rect>
+          <text x="655" y="327" text-anchor="middle" font-size="27" font-weight="700" fill="#15181D">vision model</text>
+          <text x="655" y="358" text-anchor="middle" font-size="22" fill="#2A2F38">never saw text</text>
+          <line x1="765" y1="95" x2="893" y2="180" stroke="#1D4E89" stroke-width="3.5" marker-end="url(#ahb)"></line>
+          <line x1="765" y1="215" x2="893" y2="215" stroke="#1D4E89" stroke-width="3.5" marker-end="url(#ahb)"></line>
+          <line x1="765" y1="335" x2="893" y2="250" stroke="#1D4E89" stroke-width="3.5" marker-end="url(#ahb)"></line>
+          <rect x="900" y="140" width="282" height="150" rx="10" fill="#1D4E89"></rect>
+          <text x="1041" y="186" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">one shared map</text>
+          <text x="1041" y="221" text-anchor="middle" font-size="22" fill="#E3EAF4">of how concepts</text>
+          <text x="1041" y="250" text-anchor="middle" font-size="22" fill="#E3EAF4">relate to each other</text>
+          <text x="1041" y="326" text-anchor="middle" font-size="22" fill="#5B6472" font-style="italic">tighter as models</text>
+          <text x="1041" y="354" text-anchor="middle" font-size="22" fill="#5B6472" font-style="italic">grow larger and better</text>
+</svg>
+</div>
+<aside>About 35 seconds. The problem: if the linear and Platonic hypotheses hold, then models trained separately should agree on how concepts relate to each other, even though each stores them in its own private coordinates. Is credibility close to formality and opposed to sarcasm in every model? It matters because, if the map is shared, what we learn inside one model can be checked in others. And it tells us whether models learn something about the world, or just quirks of their training.</aside>
 </section>
