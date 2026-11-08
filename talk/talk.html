@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>AI Day Lightning Talk</title>
+<html lang="en"><head><meta charset="utf-8"><title>AI Day 3-Minute Research Presentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap">
 <style>
@@ -11,164 +11,86 @@ section { width: 1920px; height: 1080px; position: relative; overflow: hidden; b
 @media screen { section { margin: 0 auto 24px } }
 </style></head><body>
 <section id="cover" data-transition="fade" style="background:#0F2A4A;color:#FFFFFF;font-family:'Source Serif 4', Georgia, serif;padding:128px 128px 128px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F0B27A">2026 Brock AI Day · Explainable AI / Deep Learning</p>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F0B27A">2026 Brock AI Day · 3-minute research presentation</p>
 <div style="display:flex;flex-direction:column;gap:40px">
 <h1 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:112px;font-weight:700;line-height:1.05;color:#FFFFFF">Are language models converging on shared structures?</h1>
-<p style="font-size:40px;line-height:1.35;color:#C9D6E8">Mechanistic interpretability, the linear representation hypothesis, and the Platonic representation hypothesis</p>
+<p style="font-size:40px;line-height:1.35;color:#C9D6E8">Do AI models built by different teams, from different text, organize ideas the same way?</p>
 </div>
 <p style="font-size:32px;color:#FFFFFF">James R. A. Henry · Computer Science, Brock University</p>
 
 </section>
 
-<section id="interp" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:40px">
+<section id="background" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:44px">
 <div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Mechanistic interpretability</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Is AI really a “black box”?</h2>
-</div>
-<div style="display:flex;gap:32px"><div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#FFFFFF;padding:40px;border:1px solid #D3D9E2;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:26px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5B6572">From the outside</p><div style="display:flex;align-items:center;gap:16px"><div style="flex:1;display:flex;flex-direction:column;gap:4px;background:#FFFFFF;border:2px solid #15181D;padding:44px 12px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:40px;font-weight:700;color:#15181D;text-align:center">Prompt</p></div><svg width="40" height="20" viewBox="0 0 56 28" aria-label="leads to"><path d="M0 9h34V0l22 14-22 14V19H0z" fill="#8A94A6"/></svg><div style="flex:1;display:flex;flex-direction:column;gap:4px;background:#4A5260;border:2px solid #4A5260;padding:44px 12px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:40px;font-weight:700;color:#FFFFFF;text-align:center">Model</p><p style="font-size:31px;color:#FFFFFF;text-align:center;white-space:nowrap">a sealed box</p></div><svg width="40" height="20" viewBox="0 0 56 28" aria-label="leads to"><path d="M0 9h34V0l22 14-22 14V19H0z" fill="#8A94A6"/></svg><div style="flex:1;display:flex;flex-direction:column;gap:4px;background:#FFFFFF;border:2px solid #15181D;padding:44px 12px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:40px;font-weight:700;color:#15181D;text-align:center">Output</p></div></div><p style="font-size:42px;line-height:1.3;color:#15181D">Judge a model by what it says.</p></div><div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#1D4E89;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:26px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#DCE6F4">From the inside</p><div style="display:flex;align-items:center;gap:12px"><div style="flex:2.5;display:flex;flex-direction:column;background:#FFFFFF;border:2px solid #15181D;padding:44px 8px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;color:#15181D;text-align:center">Prompt</p></div><svg width="28" height="14" viewBox="0 0 56 28" aria-label="leads to"><path d="M0 9h34V0l22 14-22 14V19H0z" fill="#DCE6F4"/></svg><div style="flex:5;display:flex;flex-direction:column;gap:8px"><div style="display:flex;gap:8px"><div style="flex:1;display:flex;flex-direction:column;background:#DCE6F4;border:2px solid #DCE6F4;padding:44px 8px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;color:#0F2A4A;text-align:center">L1</p></div><div style="flex:1;display:flex;flex-direction:column;background:#DCE6F4;border:2px solid #DCE6F4;padding:44px 8px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;color:#0F2A4A;text-align:center">L2</p></div><div style="flex:1;display:flex;flex-direction:column;background:#DCE6F4;border:2px solid #DCE6F4;padding:44px 8px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;color:#0F2A4A;text-align:center">…</p></div><div style="flex:1;display:flex;flex-direction:column;background:#DCE6F4;border:2px solid #DCE6F4;padding:44px 8px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;color:#0F2A4A;text-align:center">LN</p></div></div><p style="font-size:34px;color:#DCE6F4;text-align:center">layer activations</p></div><svg width="28" height="14" viewBox="0 0 56 28" aria-label="leads to"><path d="M0 9h34V0l22 14-22 14V19H0z" fill="#DCE6F4"/></svg><div style="flex:2.5;display:flex;flex-direction:column;background:#FFFFFF;border:2px solid #15181D;padding:44px 8px;border-radius:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;color:#15181D;text-align:center">Output</p></div></div><p style="font-size:42px;line-height:1.3;color:#FFFFFF">Read what it represents, and how.</p></div></div>
-<p style="font-size:40px;line-height:1.4;color:#3C4450">People say AI is a “black box”, but that is not strictly true. Mechanistic interpretability is an attempt to understand how a model represents information.<br><b>You must hold the model’s weights to do it.</b></p>
-
-</section>
-
-<section id="lrh" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:40px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Concepts are vectors: the Linear Representation Hypothesis</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">A concept is a direction</h2>
-</div>
-<div style="display:flex;justify-content:center;background:#FFFFFF;padding:16px;border:1px solid #D3D9E2;border-radius:16px">
-<svg viewBox="0 0 1010 250" width="1500" height="371" aria-label="Activation space, two of thousands of dimensions: prompts that express negation (blue dots, such as it wasn’t bad, the film was not good, never not once) lie along a dashed orange line, the concept vector; prompts without it (white dots, such as great film, arrived on time) do not. Projection onto the line measures how much negation." style="display:block;font-family:'Bricolage Grotesque', Arial, sans-serif">
-        <line x1="70" y1="225" x2="70" y2="15" stroke="#8A94A6" stroke-width="2"></line>
-        <line x1="70" y1="225" x2="560" y2="225" stroke="#8A94A6" stroke-width="2"></line>
-        <text x="315" y="246" text-anchor="middle" font-size="20" fill="#5B6472">activation space (two of thousands of dimensions)</text>
-        <line x1="70" y1="225" x2="540" y2="35" stroke="#B3541E" stroke-width="5" stroke-dasharray="14 10"></line>
-        <polygon points="528,30 556,28 540,52" fill="#B3541E"></polygon>
-        <circle cx="205" cy="176" r="10" fill="#1D4E89"></circle>
-        <circle cx="262" cy="146" r="10" fill="#1D4E89"></circle>
-        <circle cx="318" cy="130" r="10" fill="#1D4E89"></circle>
-        <circle cx="356" cy="104" r="10" fill="#1D4E89"></circle>
-        <circle cx="412" cy="92" r="10" fill="#1D4E89"></circle>
-        <circle cx="452" cy="60" r="10" fill="#1D4E89"></circle>
-        <circle cx="300" cy="158" r="10" fill="#1D4E89"></circle>
-        <circle cx="395" cy="66" r="10" fill="#1D4E89"></circle>
-        <text x="222" y="200" font-size="21" fill="#1D4E89" font-style="italic">“it wasn’t bad”</text>
-        <text x="372" y="128" font-size="21" fill="#1D4E89" font-style="italic">“the film was not good”</text>
-        <text x="472" y="88" font-size="21" fill="#1D4E89" font-style="italic">“never, not once”</text>
-        <circle cx="120" cy="120" r="10" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></circle>
-        <circle cx="160" cy="70" r="10" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></circle>
-        <circle cx="110" cy="190" r="10" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></circle>
-        <circle cx="250" cy="48" r="10" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></circle>
-        <circle cx="430" cy="196" r="10" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></circle>
-        <circle cx="500" cy="150" r="10" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></circle>
-        <text x="196" y="26" text-anchor="middle" font-size="21" fill="#5B6472" font-style="italic">“great film”</text>
-        <text x="446" y="214" font-size="21" fill="#5B6472" font-style="italic">“arrived on time”</text>
-        <circle cx="650" cy="60" r="10" fill="#1D4E89"></circle>
-        <text x="672" y="68" font-size="26" fill="#15181D">prompts <tspan font-weight="700">with</tspan> the concept</text>
-        <circle cx="650" cy="110" r="10" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></circle>
-        <text x="672" y="118" font-size="26" fill="#15181D">prompts without it</text>
-        <line x1="636" y1="160" x2="666" y2="160" stroke="#B3541E" stroke-width="5" stroke-dasharray="10 7"></line>
-        <text x="672" y="168" font-size="26" fill="#15181D">concept vector: <tspan font-weight="700" fill="#B3541E">negation</tspan></text>
-        <text x="636" y="210" font-size="23" fill="#5B6472">projection = how much negation</text>
-</svg>
-</div>
-<p style="font-size:34px;line-height:1.4;color:#3C4450">A model stores each concept it learns, such as negation, as a vector in its activation space. The more strongly a prompt expresses the concept, the further it lands along that vector.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5B6572">Park, K., Choe, Y. J., &amp; Veitch, V. (2024). <i>The Linear Representation Hypothesis and the Geometry of Large Language Models.</i> ICML.</p>
-
-</section>
-
-<section id="vectors" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:40px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Representation engineering: difference of means</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Finding the direction</h2>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Background: three ideas</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">How to look inside a language model</h2>
 </div>
 <div style="display:flex;gap:32px">
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:40px;border:1px solid #D3D9E2;border-radius:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:26px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#1D4E89">With credibility markers</p>
-<p style="font-size:38px;font-style:italic;line-height:1.4;color:#15181D">“Traditional vaccine development is a meticulous process, typically requiring 10–15 years…”</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FFFFFF;border:1px solid #D3D9E2;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:800;line-height:1;color:#B3541E">1</p><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.15;color:#1D4E89">Mechanistic interpretability</p><p style="font-size:36px;line-height:1.4;color:#15181D">Study a model by reading its internal activity, not just its answers. That needs the model’s weights, so we use open models.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FFFFFF;border:1px solid #D3D9E2;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:800;line-height:1;color:#B3541E">2</p><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.15;color:#1D4E89">Ideas are directions</p><p style="font-size:36px;line-height:1.4;color:#15181D">A model stores each idea it learns, like <i>negation</i> or <i>credibility</i>, as a direction inside it. The Linear Representation Hypothesis.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#1D4E89;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:800;line-height:1;color:#F0B27A">3</p><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:38px;font-weight:700;line-height:1.15;color:#DCE6F4">One world, one map?</p><p style="font-size:36px;line-height:1.4;color:#FFFFFF">Models trained on different data may converge on the same picture of the world. The Platonic Representation Hypothesis.</p></div>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:40px;border:1px solid #D3D9E2;border-radius:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:26px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5B6572">Same claim, no grounding</p>
-<p style="font-size:38px;font-style:italic;line-height:1.4;color:#15181D">“It’s just common sense that a vaccine should take years to develop…”</p>
-</div>
-</div>
-<div style="display:flex;flex-direction:column;gap:12px;background:#1D4E89;padding:40px 48px;border-radius:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:46px;font-weight:600;line-height:1.2;color:#FFFFFF">mean(with) − mean(without) = the concept vector, at every layer</p>
-<p style="font-size:30px;color:#DCE6F4">17 concepts · 250 pairs each</p>
-</div>
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5B6572">Zou, A., et al. (2023). <i>Representation Engineering: A Top-Down Approach to AI Transparency.</i> arXiv:2310.01405. · Rimsky, N., et al. (2024). <i>Steering Llama 2 via Contrastive Activation Addition.</i> ACL.</p>
+<p style="position:absolute;left:128px;bottom:56px;width:1664px;font-size:22px;line-height:1.3;color:#5B6572">Park, Choe &amp; Veitch (2024), <i>The Linear Representation Hypothesis and the Geometry of Large Language Models</i>, ICML · Huh, Cheung, Wang &amp; Isola (2024), <i>The Platonic Representation Hypothesis</i>, ICML.</p>
 
 </section>
 
-<section id="hypothesis" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:24px">
-<div style="display:flex;flex-direction:column;gap:12px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">The Platonic Representation Hypothesis</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Different shadows, one world?</h2>
-</div>
-<div style="display:flex;justify-content:center;background:#FFFFFF;padding:16px;border:1px solid #D3D9E2;border-radius:16px">
-<svg viewBox="0 0 1200 430" width="1340" height="480" aria-label="Diagram: one world is seen through different data (two text corpora and images); separately trained models (Llama, Mistral, a vision model that never saw text) each learn from it, and all converge on one shared map of how concepts relate to each other, tighter as models grow larger and better" style="display:block;font-family:'Bricolage Grotesque', Arial, sans-serif">
-          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#15181D"></path></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1D4E89"></path></marker></defs>
-          <text x="105" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">THE WORLD</text>
-          <text x="350" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">ITS SHADOWS (DATA)</text>
-          <text x="655" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">LEARNERS</text>
-          <text x="1040" y="24" text-anchor="middle" font-size="22" fill="#5B6472" font-weight="700" letter-spacing="0.04em">WHAT THEY RECOVER</text>
-          <line x1="350" y1="44" x2="350" y2="398" stroke="#8A94A6" stroke-width="7"></line>
-          <text x="350" y="424" text-anchor="middle" font-size="20" fill="#5B6472">the cave wall</text>
-          <circle cx="105" cy="215" r="92" fill="#E3EAF4" stroke="#1D4E89" stroke-width="3"></circle>
-          <text x="105" y="210" text-anchor="middle" font-size="28" font-weight="700" fill="#15181D">one world</text>
-          <text x="105" y="240" text-anchor="middle" font-size="21" fill="#2A2F38">Plato: the Form</text>
-          <line x1="175" y1="155" x2="236" y2="105" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
-          <line x1="198" y1="215" x2="236" y2="215" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
-          <line x1="175" y1="275" x2="236" y2="325" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
-          <rect x="245" y="50" width="210" height="90" fill="#4A5260"></rect>
-          <text x="350" y="87" text-anchor="middle" font-size="27" font-weight="700" fill="#FFFFFF">text corpus A</text>
-          <text x="350" y="118" text-anchor="middle" font-size="22" fill="#E3EAF4">web, books, code</text>
-          <rect x="245" y="170" width="210" height="90" fill="#4A5260"></rect>
-          <text x="350" y="207" text-anchor="middle" font-size="27" font-weight="700" fill="#FFFFFF">text corpus B</text>
-          <text x="350" y="238" text-anchor="middle" font-size="22" fill="#E3EAF4">different mix</text>
-          <rect x="245" y="290" width="210" height="90" fill="#4A5260"></rect>
-          <text x="350" y="327" text-anchor="middle" font-size="27" font-weight="700" fill="#FFFFFF">images</text>
-          <text x="350" y="358" text-anchor="middle" font-size="22" fill="#E3EAF4">pixels, no words</text>
-          <line x1="455" y1="95" x2="537" y2="95" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
-          <rect x="545" y="50" width="220" height="90" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></rect>
-          <text x="655" y="87" text-anchor="middle" font-size="27" font-weight="700" fill="#15181D">model A</text>
-          <text x="655" y="118" text-anchor="middle" font-size="22" fill="#2A2F38">e.g. Llama</text>
-          <line x1="455" y1="215" x2="537" y2="215" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
-          <rect x="545" y="170" width="220" height="90" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></rect>
-          <text x="655" y="207" text-anchor="middle" font-size="27" font-weight="700" fill="#15181D">model B</text>
-          <text x="655" y="238" text-anchor="middle" font-size="22" fill="#2A2F38">e.g. Mistral</text>
-          <line x1="455" y1="335" x2="537" y2="335" stroke="#15181D" stroke-width="3.5" marker-end="url(#ah)"></line>
-          <rect x="545" y="290" width="220" height="90" fill="#FFFFFF" stroke="#15181D" stroke-width="3"></rect>
-          <text x="655" y="327" text-anchor="middle" font-size="27" font-weight="700" fill="#15181D">vision model</text>
-          <text x="655" y="358" text-anchor="middle" font-size="22" fill="#2A2F38">never saw text</text>
-          <line x1="765" y1="95" x2="893" y2="180" stroke="#1D4E89" stroke-width="3.5" marker-end="url(#ahb)"></line>
-          <line x1="765" y1="215" x2="893" y2="215" stroke="#1D4E89" stroke-width="3.5" marker-end="url(#ahb)"></line>
-          <line x1="765" y1="335" x2="893" y2="250" stroke="#1D4E89" stroke-width="3.5" marker-end="url(#ahb)"></line>
-          <rect x="900" y="140" width="282" height="150" rx="10" fill="#1D4E89"></rect>
-          <text x="1041" y="186" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">one shared map</text>
-          <text x="1041" y="221" text-anchor="middle" font-size="22" fill="#E3EAF4">of how concepts</text>
-          <text x="1041" y="250" text-anchor="middle" font-size="22" fill="#E3EAF4">relate to each other</text>
-          <text x="1041" y="326" text-anchor="middle" font-size="22" fill="#5B6472" font-style="italic">tighter as models</text>
-          <text x="1041" y="354" text-anchor="middle" font-size="22" fill="#5B6472" font-style="italic">grow larger and better</text>
-</svg>
-</div>
-<div style="display:flex;flex-direction:column;gap:8px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.15;color:#B3541E">What converges is relations, not coordinates.</p>
-<p style="font-size:34px;line-height:1.4;color:#3C4450">Prediction: models that never shared a weight should agree on how concepts relate to each other.</p>
-</div>
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5B6572">Huh, M., Cheung, B., Wang, T., &amp; Isola, P. (2024). <i>The Platonic Representation Hypothesis.</i> ICML.</p>
-
-</section>
-
-<section id="meaning" data-transition="fade" style="background:#0F2A4A;color:#FFFFFF;font-family:'Source Serif 4', Georgia, serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
-<div style="width:1664px;display:flex;flex-direction:column;gap:36px">
+<section id="problem" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:44px">
 <div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F0B27A">The question for the poster</p>
-<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1;color:#FFFFFF">Do independently trained models agree?</h2>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Problem</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Do different models learn the same map of ideas?</h2>
 </div>
-<p style="width:1240px;font-size:38px;line-height:1.4;color:#C9D6E8">If the hypothesis is right, models built by different teams on different text should agree on how their concepts relate to one another. I tested that across 35 open models, concept by concept and layer by layer.</p>
-<p style="width:1240px;font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:54px;font-weight:600;line-height:1.2;color:#F0B27A">If they do, is it the structure of language itself, or of the world it describes?</p>
+<div style="display:flex;gap:48px;align-items:stretch">
+<div style="flex:1.1;display:flex;flex-direction:column;gap:28px"><p style="font-size:38px;line-height:1.4;color:#15181D">Every model stores ideas in its own private coordinates, so you cannot lay one model’s directions over another’s.</p><p style="font-size:38px;line-height:1.4;color:#15181D">But the <b>relationships</b> between ideas could still match: is credibility close to formality, far from sarcasm, in every model?</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#1D4E89;padding:44px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:30px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#DCE6F4">Why it matters</p><p style="font-size:34px;line-height:1.4;color:#FFFFFF">If the map is shared, what we learn inside one model can be checked in others.</p><p style="font-size:34px;line-height:1.4;color:#FFFFFF">And it tells us whether models learn something about the world, or just quirks of their training.</p></div>
 </div>
-<img src="assets/qr.png" alt="QR code linking to github.com/jamesrahenry/ai-day-2026" style="position:absolute;left:1472px;top:560px;width:320px;height:320px;object-fit:contain;background:#FFFFFF">
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:28px;color:#C9D6E8">The results are on the poster. Come and talk it through. Code and reading list: github.com/jamesrahenry/ai-day-2026</p>
+
+</section>
+
+<section id="method" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Method</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">Find each idea, then compare the angles</h2>
+</div>
+<div style="display:flex;gap:28px">
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FFFFFF;border:1px solid #D3D9E2;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:800;line-height:1;color:#B3541E">1</p><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15;color:#1D4E89">Write pairs</p><p style="font-size:32px;line-height:1.4;color:#15181D">The same passage twice, with and without the idea. 17 ideas, 250 pairs each.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FFFFFF;border:1px solid #D3D9E2;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:800;line-height:1;color:#B3541E">2</p><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15;color:#1D4E89">Find the directions</p><p style="font-size:32px;line-height:1.4;color:#15181D">Run both through 35 open models from 10 families. The difference is the idea’s direction.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#FFFFFF;border:1px solid #D3D9E2;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:800;line-height:1;color:#B3541E">3</p><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15;color:#1D4E89">Compare angles</p><p style="font-size:32px;line-height:1.4;color:#15181D">Inside each model, measure how close each idea is to every other. Angles can be compared across models; coordinates cannot.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px;background:#1D4E89;padding:40px;border-radius:16px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:64px;font-weight:800;line-height:1;color:#F0B27A">4</p><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15;color:#DCE6F4">Try to fail</p><p style="font-size:32px;line-height:1.4;color:#FFFFFF">Hide a whole model family. Can the other families’ angles alone name its ideas?</p></div>
+</div>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:30px;font-weight:500;color:#3C4450">Models include Llama, Mistral, Qwen, Gemma, Pythia, OPT and GPT-2, from 70 million to 72 billion parameters.</p>
+
+</section>
+
+<section id="results" data-transition="fade" style="background:#F4F6F9;color:#15181D;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1D4E89">Results</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:68px;font-weight:700;line-height:1.1;color:#15181D">The other families name the hidden ideas</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:150px;font-weight:800;line-height:1;color:#1D4E89">97%</p><p style="font-size:30px;line-height:1.35;color:#15181D">of ideas named correctly in a hidden model family, in the middle layers</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px"><p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:150px;font-weight:800;line-height:1;color:#5B6572">6%</p><p style="font-size:30px;line-height:1.35;color:#15181D">with the labels shuffled, or with random directions: chance</p></div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#3C4450">One example: in 29 of 35 models, the idea most closely tied to credibility is formality.</p>
+</div>
+<div style="display:flex;justify-content:center;background:#FFFFFF;padding:12px;border:1px solid #D3D9E2;border-radius:16px"><img src="assets/ribbon_right.png" alt="Share of ideas correctly named in a hidden model family, by depth: 87% at the first layer rising to 97% in the middle layers; shuffled labels and random directions stay flat at about 6%, which is chance." style="width:690px;height:580px;object-fit:contain"></div>
+</div>
+
+</section>
+
+<section id="conclusion" data-transition="fade" style="background:#0F2A4A;color:#FFFFFF;font-family:'Source Serif 4', Georgia, serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F0B27A">Conclusion</p>
+<h2 style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1;color:#FFFFFF">Different models, one map of ideas</h2>
+</div>
+<div style="width:1240px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:36px;line-height:1.4;color:#C9D6E8">Language models built by different teams, from different text, organize ideas the same way. That supports the Platonic Representation Hypothesis, measured idea by idea.</p>
+<p style="font-size:36px;line-height:1.4;color:#C9D6E8">Because the map is shared, findings from inside one model can be tested on others.</p>
+<p style="font-family:'Bricolage Grotesque', Arial, sans-serif;font-size:50px;font-weight:600;line-height:1.2;color:#F0B27A">Is this the structure of language itself, or of the world it describes?</p>
+</div>
+<img src="assets/qr.png" alt="QR code linking to github.com/jamesrahenry/ai-day-2026" style="position:absolute;left:1472px;top:600px;width:320px;height:320px;object-fit:contain;background:#FFFFFF">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:28px;color:#C9D6E8">Come and see the poster. Code, data and reading list: github.com/jamesrahenry/ai-day-2026</p>
 
 </section>
 

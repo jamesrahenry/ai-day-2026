@@ -48,7 +48,7 @@ def spoken(n):  # drop the timing cue and any "If asked..." Q&A note; neither is
     n = n.split("\n\nIf asked")[0]
     return re.sub(r"^About \d+ seconds\.\s*", "", n)
 words = sum(len(spoken(n).split()) for _, n in notes)
-md = [f"# Lightning talk: speaker notes", "", f"*Written: {now}*", "",
+md = [f"# 3-minute research presentation: speaker notes", "", f"*Written: {now}*", "",
       f"About {words} spoken words in the notes (timing cues and Q&A notes excluded), roughly {words / 150:.1f} minutes at 150 words per minute. "
       "Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.", ""]
 for i, (sid, n) in enumerate(notes, 1):

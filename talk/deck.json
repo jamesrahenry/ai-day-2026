@@ -5,27 +5,31 @@
     "at": "2026-11-05T15:40:00Z"
   },
   "lists": "css",
-  "title": "AI Day Lightning Talk",
+  "title": "AI Day 3-Minute Research Presentation",
   "order": [
     "cover",
-    "interp",
-    "lrh",
-    "vectors",
-    "hypothesis",
-    "meaning"
+    "background",
+    "problem",
+    "method",
+    "results",
+    "conclusion"
   ],
   "sections": {
     "s1": {
-      "description": "Question: do models trained on different text organize concepts the same way?",
+      "description": "Title and background: mechanistic interpretability, LRH, PRH.",
       "start": "cover"
     },
     "s2": {
-      "description": "Background: mechanistic interpretability, the linear representation hypothesis, and how concept vectors are found.",
-      "start": "interp"
+      "description": "Problem: do different models learn the same map of ideas, and why it matters.",
+      "start": "problem"
     },
     "s3": {
-      "description": "Hypothesis and invitation: the platonic representation hypothesis, and the poster.",
-      "start": "hypothesis"
+      "description": "Method: contrastive pairs, concept directions, angles, held-out family test.",
+      "start": "method"
+    },
+    "s4": {
+      "description": "Results and conclusion.",
+      "start": "results"
     }
   },
   "faces": {
