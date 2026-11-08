@@ -1,6 +1,6 @@
 # 3-minute research presentation: speaker notes
 
-*Written: 2026-11-08 14:25 UTC*
+*Written: 2026-11-08 14:30 UTC*
 
 About 401 spoken words in the notes (timing cues and Q&A notes excluded), roughly 2.7 minutes at 150 words per minute. Slides: `talk.pdf` (print/present) and `talk.html`; sources in `slides/`.
 
